@@ -1,0 +1,13 @@
+<svg width="60" height="60" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- The T-shirt Shape (Black) -->
+  <path 
+    d="M35 15 L25 20 L10 30 L20 45 L25 40 L25 85 L75 85 L75 40 L80 45 L90 30 L75 20 L65 15 Q50 25 35 15 Z" 
+    fill="black" 
+  />
+  
+  <!-- The Yellow Bolt (Center Chest) -->
+  <path 
+    d="M52 32 L40 52 L48 52 L45 72 L60 47 L50 47 L55 32 Z" 
+    fill="#FFD700" 
+  />
+</svg>
