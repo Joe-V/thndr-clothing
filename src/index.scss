@@ -1,7 +1,14 @@
-
 body {
   margin: 0;
-  font-family: 'Orbitron' , sans-serif;
+  font-family: 'Orbitron', sans-serif; /* This is the specific font used */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'Orbitron' , sans-serif;
+}
+
+* {
+  box-sizing: border-box;
 }
