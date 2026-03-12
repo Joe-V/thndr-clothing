@@ -1,0 +1,17 @@
+.sign-in-container {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+
+
+  @media screen and (max-width: 400px) {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+.buttons-sign-in-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; 
+}

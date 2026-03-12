@@ -1,14 +1,27 @@
 body {
   margin: 0;
-  font-family: 'Orbitron', sans-serif; /* This is the specific font used */
+  /* Switching to Open Sans Condensed makes the text fit perfectly in the buttons */
+  font-family: 'Open Sans Condensed', sans-serif; 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: 'Orbitron' , sans-serif;
+.logo-container {
+   font-family: 'Orbitron', sans-serif;
 }
 
 * {
   box-sizing: border-box;
+}
+h1 {
+  font-family: 'Orbitron', sans-serif; 
+  text-align: center;
+  margin: 50px 0;
+  font-size: 32px;
+}
+
+h2 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+  margin: 10px 0;
 }

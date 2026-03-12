@@ -4,18 +4,19 @@
   height: 50px;
   letter-spacing: 0.5px;
   line-height: 50px;
-  padding: 0 35px 0 35px;
-  font-size: 15px;
+  padding: 0 10px;        /* REDUCED from 35px to 10px */
+  font-size: 12px;        /* REDUCED from 15px to 12px */
   background-color: black;
   color: white;
   text-transform: uppercase;
-  font-family: 'Orbitron' ,sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-weight: bolder;
   border: none;
   cursor: pointer;
   display: flex;
   justify-content: center;
-  align-items: center; // Added to make sure text is centered vertically
+  align-items: center;
+  white-space: nowrap;    /* ADD THIS: Keeps text on one single line */
 
   &:hover {
     background-color: white;
@@ -26,6 +27,7 @@
   &.google-sign-in {
     background-color: #4285f4;
     color: white;
+    font-size: 11px;      /* EXTRA SMALL for Google text */
 
     &:hover {
       background-color: #357ae8;
