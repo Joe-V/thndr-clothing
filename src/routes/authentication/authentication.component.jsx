@@ -7,8 +7,8 @@ const Authentication = () => {
     <div>
       <h1 style={{ textAlign: 'center', margin: '20px 0' }}>Sign In/Sign Up</h1>
       <div className='auth-container'>
-        <SignUpForm />
         <SignINForm />
+        <SignUpForm />
       </div>
     </div>
   );

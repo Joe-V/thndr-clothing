@@ -1,11 +1,13 @@
+
 import { Outlet, Link } from "react-router-dom";
 import Logo from '../../assets/Logo.svg?react';
 import './NavBar.styles.scss';
 import { useContext } from "react";
 import { UserContext } from "../../contexts/user.context";
-
+import { signOutUser } from "../../utils/Firebase/firebase.utils";
 const NavBar = () => {
   const {currentUser} = useContext(UserContext);
+
   return (
     <>
       <div className='navigation'>
@@ -19,7 +21,7 @@ const NavBar = () => {
 
            {
             currentUser ? (
-              <span className="nav-link">SIGN-OUT</span>
+              <span className="nav-link" onClick={signOutUser}> SIGN OUT </span>
             ) : (
               <Link className='nav-link' to='/auth'>
                 SIGN-IN

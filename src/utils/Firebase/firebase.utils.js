@@ -4,7 +4,8 @@ import { getAuth ,
          GoogleAuthProvider,
          createUserWithEmailAndPassword,
          signInWithEmailAndPassword,
-         signOut
+         signOut,
+         onAuthStateChanged        
         } 
          from "firebase/auth";    
 
@@ -45,6 +46,7 @@ export const createUserDocumentFromAuth = async (userAuth , extraInfo) => {
             
     const userDocRef = doc(db, 'users', userAuth.uid);
     const userSnapshot = await getDoc(userDocRef);
+    
     if(!userSnapshot.exists()){
         const {displayName , email} = userAuth;
         const createdAt = new Date();
@@ -77,3 +79,7 @@ export const signINAuthUserWithEmailAndPassword = async (email , password) => {
 
 
 export const signOutUser = async () => await signOut(auth);
+
+
+
+export const onAuthStateChangedListner = (callback) => onAuthStateChanged(auth,callback);
