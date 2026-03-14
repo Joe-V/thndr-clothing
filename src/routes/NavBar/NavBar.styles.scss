@@ -2,28 +2,46 @@
   height: 70px;
   width: 100%;
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
+  align-items: center; 
   margin-bottom: 25px;
+
+  @media screen and (max-width: 800px) {
+    height: 60px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
 
   .logo-container {
     height: 100%;
     width: 70px;
-    padding: 25px;
+    display: flex;      
+    align-items: center; 
+    justify-content: center; 
+
+    @media screen and (max-width: 800px) {
+      width: 50px;
+    }
   }
 
   .nav-links-container {
-    width: 50%;
+    width: 80%; // Increased from 50% for mobile breathing room
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;  
+    justify-content: flex-end;
+
     .nav-link {
       padding: 10px 15px;
       cursor: pointer;
       text-transform: uppercase;
-      text-decoration: none;
-      color: black;
-      box-sizing: border-box;
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-weight: 700;
+
+      @media screen and (max-width: 800px) {
+        padding: 10px 10px;
+        font-size: 14px;
+      }
     }
   }
 }

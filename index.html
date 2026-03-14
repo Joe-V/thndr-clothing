@@ -3,18 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- CHANGE 1: Added maximum-scale=1 to prevent iOS auto-zooming on inputs -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Added Open Sans Condensed for the tutorial's clean look -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet">
+    <!-- CHANGE 2: Combined the font links into one request for better performance -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
     
-    <!-- Kept Orbitron in case you want it for your logo/brand name -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-    
-    <title>thunder-clothing</title>
+    <title>Thunder Clothing</title>
   </head>
   <body>
     <div id="root"></div>

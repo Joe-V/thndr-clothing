@@ -1,6 +1,7 @@
 
 import { Outlet, Link } from "react-router-dom";
 import Logo from '../../assets/Logo.svg?react';
+import CartIcon from "../../components/cart-icon/cart-icon.component";
 import './NavBar.styles.scss';
 import { useContext } from "react";
 import { UserContext } from "../../contexts/user.context";
@@ -19,15 +20,14 @@ const NavBar = () => {
             SHOP
           </Link>
 
-           {
-            currentUser ? (
+           {currentUser ? (
               <span className="nav-link" onClick={signOutUser}> SIGN OUT </span>
             ) : (
               <Link className='nav-link' to='/auth'>
                 SIGN-IN
               </Link>
-            )
-          }
+            )}
+            <CartIcon/>
         </div>
       </div>
       <Outlet />

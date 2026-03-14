@@ -1,0 +1,19 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Style settings for thick lines and rounded ends -->
+  <g fill="none" stroke="#010002" stroke-width="22" stroke-linecap="round" stroke-linejoin="round">
+    
+    <!-- The main body of the bag -->
+    <path d="M 60,110 L 60,340 L 340,340 L 340,110" />
+    
+    <!-- Top horizontal bars -->
+    <path d="M 60,110 H 135" />
+    <path d="M 265,110 H 340" />
+    
+    <!-- The handle arc -->
+    <path d="M 140,120 C 140,0 260,0 260,120" />
+    
+    <!-- Small circular handle attachments (fill these in) -->
+    <circle cx="140" cy="135" r="5" fill="#010002" stroke="none" />
+    <circle cx="260" cy="135" r="5" fill="#010002" stroke="none" />
+  </g>
+</svg>

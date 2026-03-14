@@ -8,20 +8,30 @@
   border: 1px solid black; 
   margin: 0 7.5px 15px;
   overflow: hidden;
+  position: relative; // Required for absolute body positioning
 
+  @media screen and (max-width: 800px) {
+    height: 200px;
+    min-width: 45%; // Two columns on tablet
+  }
+
+  @media screen and (max-width: 450px) {
+    min-width: 90%; // One column on mobile
+  }
 
   &:nth-child(n+4) {
     height: 380px;
+    @media screen and (max-width: 800px) {
+      height: 200px; // Match other cards on small screens
+    }
   }
 
   &:hover {
     cursor: pointer;
-
     & .background-image {
       transform: scale(1.1);
       transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     }
-
     & .category-body-container {
       opacity: 0.9;
     }
@@ -45,6 +55,7 @@
     background-color: white;
     opacity: 0.7;
     position: absolute; 
+
     h2 {
       font-weight: bold;
       margin: 0 6px 0;
