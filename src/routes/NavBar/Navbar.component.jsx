@@ -2,12 +2,15 @@
 import { Outlet, Link } from "react-router-dom";
 import Logo from '../../assets/Logo.svg?react';
 import CartIcon from "../../components/cart-icon/cart-icon.component";
+import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
 import './NavBar.styles.scss';
 import { useContext } from "react";
 import { UserContext } from "../../contexts/user.context";
+import { CartItemsContext } from "../../contexts/cart_Items.context";
 import { signOutUser } from "../../utils/Firebase/firebase.utils";
 const NavBar = () => {
   const {currentUser} = useContext(UserContext);
+  const {isCartOpen} = useContext(CartItemsContext);
 
   return (
     <>
@@ -29,6 +32,7 @@ const NavBar = () => {
             )}
             <CartIcon/>
         </div>
+        {isCartOpen && <CartDropdown/>}
       </div>
       <Outlet />
     </>
