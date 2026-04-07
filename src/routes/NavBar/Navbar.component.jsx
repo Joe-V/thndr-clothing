@@ -8,7 +8,7 @@ import { useContext } from "react";
 import { UserContext } from "../../contexts/user.context";
 import { CartItemsContext } from "../../contexts/cart_Items.context";
 import { signOutUser } from "../../utils/Firebase/firebase.utils";
-const NavBar = () => {
+const NavBar = () => {                                 
   const {currentUser} = useContext(UserContext);
   const {isCartOpen} = useContext(CartItemsContext);
 
