@@ -1,18 +1,22 @@
-import SignUpForm from "../../components/sign-up-form/sign-up-form.component.jsx";
-import SignINForm from "../../components/sign-in-form/sign-in-form.component.jsx";
-import "./authentication.styles.scss";
+import SignUpForm from "../../components/sign-up-form/sign-up-form.component";
+import SignInForm from "../../components/sign-in-form/sign-in-form.component";
+
+// Import the styled components
+import { 
+  AuthenticationContainer, 
+  AuthenticationTitle 
+} from "./authentication.styles.jsx";
 
 const Authentication = () => {
   return (
     <div>
-      <h1 style={{ textAlign: 'center', margin: '20px 0' }}>Sign In/Sign Up</h1>
-      <div className='auth-container'>
-        <SignINForm />
+      <AuthenticationTitle>Sign In / Sign Up</AuthenticationTitle>
+      <AuthenticationContainer>
+        <SignInForm />
         <SignUpForm />
-      </div>
+      </AuthenticationContainer>
     </div>
   );
-}
-
+};
 
 export default Authentication;

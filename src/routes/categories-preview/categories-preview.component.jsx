@@ -1,19 +1,23 @@
-import { useContext } from 'react';
+import { useContext, Fragment } from 'react';
 
 import CategoryPreview from '../../components/category-preview/category-preview.component';
 import { CategoriesContext } from '../../contexts/categories.context';
-import './categories-preview.styles.scss';
+
+// Import the styled components
+import { CategoriesPreviewContainer } from './categories-preview.styles.jsx';
 
 const CategoriesPreview = () => {
   const { categoryMap } = useContext(CategoriesContext);
 
   return (
-    <div className='categories-preview-container'>
+    <CategoriesPreviewContainer>
       {Object.keys(categoryMap).map((title) => {
-         const products = categoryMap[title];
-         return (<CategoryPreview key={title} title={title} products={products} />);
+        const products = categoryMap[title];
+        return (
+          <CategoryPreview key={title} title={title} products={products} />
+        );
       })}
-    </div>
+    </CategoriesPreviewContainer>
   );
 };
 
