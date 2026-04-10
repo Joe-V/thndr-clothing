@@ -1,4 +1,5 @@
-// category-card.component.jsx
+import { useNavigate } from 'react-router-dom';
+
 import {
   CategoryCardContainer,
   BackgroundImage,
@@ -6,16 +7,17 @@ import {
 } from './category-card.styles';
 
 const CategoryCard = ({ category }) => {
-  const { imageUrl, title } = category;
+  const { imageUrl, title , route } = category;
+  const navigate = useNavigate();
+  const onNavigateHandler = () => navigate(route);
 
   return (
-    <CategoryCardContainer>
-      {/* Change imageUrl={imageUrl} to $imageUrl={imageUrl} */}
+    <CategoryCardContainer onClick={onNavigateHandler}>
       <BackgroundImage $imageUrl={imageUrl} />
       
       <CategoryBodyContainer>
         <h2>{title}</h2>
-        <p>Shop Now</p>
+        <p >Shop Now</p>
       </CategoryBodyContainer>
     </CategoryCardContainer>
   );

@@ -6,7 +6,7 @@ export const BaseButton = styled.button`
   height: 50px;
   letter-spacing: 0.5px;
   line-height: 50px;
-  padding: 0 15px; /* Adjusting padding for standard look */
+  padding: 0 15px; 
   font-size: 13px;
   background-color: black;
   color: white;
@@ -27,7 +27,6 @@ export const BaseButton = styled.button`
   }
 `;
 
-// Extends BaseButton styles but overrides specific colors for Google
 export const GoogleSignInButton = styled(BaseButton)`
   background-color: #4285f4;
   color: white;
@@ -38,7 +37,6 @@ export const GoogleSignInButton = styled(BaseButton)`
   }
 `;
 
-// Extends BaseButton styles but starts with the inverted look
 export const InvertedButton = styled(BaseButton)`
   background-color: white;
   color: black;

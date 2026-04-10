@@ -4,7 +4,6 @@ import {
   InvertedButton,
 } from './button.styles';
 
-// We map our button types to the actual Styled Components
 export const BUTTON_TYPE_CLASSES = {
   base: 'base',
   google: 'google',
@@ -19,7 +18,6 @@ const getButton = (buttonType = BUTTON_TYPE_CLASSES.base) =>
   }[buttonType]);
 
 const Button = ({ children, buttonType, ...otherProps }) => {
-  // getButton returns the correct Styled Component based on the prop
   const CustomButton = getButton(buttonType);
   
   return <CustomButton {...otherProps}>{children}</CustomButton>;
