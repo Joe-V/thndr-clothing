@@ -1,16 +1,15 @@
-import CategoryCard  from "../category-card/category-card.component";   
-import './categories-menu.styles.scss';
+import CategoryCard from "../category-card/category-card.component";
 
-const CategoriesMenu = ({categories}) => {
-    return(
-            <div className="categories-container" >
-      {categories.map((category) => {
-        return (
-          <CategoryCard key={category.id} category={category}/>
-        );
-      })}
-    </div>
-    );
-}
+import { CategoriesMenuContainer } from './categories-menu.styles';
+
+const CategoriesMenu = ({ categories }) => {
+  return (
+    <CategoriesMenuContainer>
+      {categories.map((category) => (
+        <CategoryCard key={category.id} category={category} />
+      ))}
+    </CategoriesMenuContainer>
+  );
+};
 
 export default CategoriesMenu;

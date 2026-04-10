@@ -1,17 +1,23 @@
-/* eslint-disable react/prop-types */
-
-import './form-input.styles.scss';
+// form-input.component.jsx
+import {
+  FormInputLabel,
+  Input,
+  Group,
+} from './form-input.styles';
 
 const FormInput = ({ label, inputOptions }) => {
   return (
-    <div className="group">
-      <input className="form-input" {...inputOptions} />
+    <Group>
+      <Input {...inputOptions} />
       {label && (
-        <label className={`${inputOptions.value.length ? 'shrink' : ''} form-input-label`}>
+        <FormInputLabel
+          /* Change 'shrink' to '$shrink' here */
+          $shrink={inputOptions.value.length}
+        >
           {label}
-        </label>
+        </FormInputLabel>
       )}
-    </div>
+    </Group>
   );
 };
 
